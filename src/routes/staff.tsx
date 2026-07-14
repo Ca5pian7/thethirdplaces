@@ -150,7 +150,7 @@ function StaffPage() {
                 <p className="text-sm leading-relaxed text-espresso-light">{person.bio}</p>
                 <div className="mt-auto flex items-center gap-3 pt-1">
                   <a
-                    href="https://discord.gg/thethirdplace"
+                    href="https://discord.gg/WBkpNH96pf"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Message ${person.name} on Discord`}
