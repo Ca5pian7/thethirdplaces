@@ -29,9 +29,9 @@ const staff: StaffMember[] = [
   {
     name: 'Kai',
     role: 'Cafe Owner',
-    bio: 'Hello, Im Kai, I like computer,space & games. ,
+    bio: 'Hello, Im Kai, I like computer,space & games.',
     tone: 'caramel',
-    offset: 'lg:mt-8',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Erika',
@@ -45,7 +45,7 @@ const staff: StaffMember[] = [
     role: 'Assistant Cafe Owner',
     bio: 'Runs the Sunday Slow Chats and refuses to let anyone leave without sharing one good thing from their week. Has a backup plan for every backup plan.',
     tone: 'clay',
-    offset: 'lg:mt-14',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Someone',
@@ -59,7 +59,7 @@ const staff: StaffMember[] = [
     role: 'Cafe Manager',
     bio: 'Speaks four languages badly and one perfectly, which he says is the whole point of the exchange channels. Personally onboards every new language pod.',
     tone: 'sage',
-    offset: 'lg:mt-6',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Cesus',
@@ -73,28 +73,28 @@ const staff: StaffMember[] = [
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
-    offset: 'lg:mt-10',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Billie Eilish',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
-    offset: 'lg:mt-10',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Umbra',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
-    offset: 'lg:mt-10',
+    offset: 'hover:-rotate-1',
   },
   {
     name: 'Pat',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
-    offset: 'lg:mt-10',
+    offset: 'hover:-rotate-1',
   },
 ]
 
