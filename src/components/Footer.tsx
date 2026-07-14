@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { CoffeeBean } from '@/components/icons'
 
-const DISCORD_URL = 'https://discord.gg/thethirdplace'
+const DISCORD_URL = 'https://discord.gg/WBkpNH96pf'
 
 const pages = [
   { to: '/', label: 'Home' },
