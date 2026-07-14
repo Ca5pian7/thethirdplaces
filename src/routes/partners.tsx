@@ -69,7 +69,7 @@ function PartnersPage() {
               </div>
               <LinkButton
                 variant="ghost"
-                href={`https://discord.gg/-${partner.slug}`}
+                href={`https://discord.gg/${partner.slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto self-start"
