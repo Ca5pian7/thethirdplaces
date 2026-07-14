@@ -80,7 +80,7 @@ function HomePage() {
               Social &middot; Make Friends &middot; Connect
             </p>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] text-espresso sm:text-5xl md:text-6xl">
-              Not your first place. Not your second. Just <span className="italic text-coffee">The Third Place.</span>
+              Not your first place. Not your second. Just <span className="italic text-coffee">The Third Café.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-espresso-light">
               We are a Discord table for people who miss the feeling of a good caf&eacute; &mdash;
