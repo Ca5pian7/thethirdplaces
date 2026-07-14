@@ -20,59 +20,80 @@ type StaffMember = {
 
 const staff: StaffMember[] = [
   {
-    name: 'Amara Okafor',
-    role: 'Founder',
-    bio: 'Started the server from her dorm room during a Lagos blackout and has not stopped tending the fire since. Still greets every hundredth member personally.',
+    name: 'DK',
+    role: 'Cafe Owner',
+    bio: 'Im Coder and I like to building things and bots, also an professional yapper.',
     tone: 'caramel',
     tilt: 'hover:-rotate-1',
   },
   {
-    name: 'Wei-Lin Tanaka-Cross',
-    role: 'Community Manager',
-    bio: 'Keeps the server calendar from imploding and has a spreadsheet for everything, including which channels get quiet around exam season.',
-    tone: 'sage',
+    name: 'Kai',
+    role: 'Cafe Owner',
+    bio: 'Hello, Im Kai, I like computer,space & games. ,
+    tone: 'caramel',
     offset: 'lg:mt-8',
   },
   {
-    name: 'Rafael Otieno-Silva',
-    role: 'Head Moderator',
+    name: 'Erika',
+    role: 'Assistant Cafe Owner',
     bio: 'Handles conflict the way he handles espresso, quickly and without bitterness. Wrote most of the community charter on a plane.',
     tone: 'clay',
     tilt: 'hover:rotate-1',
   },
   {
-    name: 'Priya Ramaswamy-Voss',
-    role: 'Events Coordinator',
+    name: 'Huggebugg',
+    role: 'Assistant Cafe Owner',
     bio: 'Runs the Sunday Slow Chats and refuses to let anyone leave without sharing one good thing from their week. Has a backup plan for every backup plan.',
-    tone: 'sage',
+    tone: 'clay',
     offset: 'lg:mt-14',
   },
   {
-    name: 'Katarzyna Nowak-Adeyemi',
-    role: 'Art Curator',
+    name: 'Someone',
+    role: 'Cafe Manager',
     bio: 'Turns members\' doodles and half-finished poems into the monthly gallery drops everyone screenshots. Once ran a 30-hour charity art auction on no sleep.',
-    tone: 'caramel',
+    tone: 'sage',
     tilt: 'hover:-rotate-1',
   },
   {
-    name: 'Sione Fifita-Marlow',
-    role: 'Language Exchange Lead',
+    name: 'Nohagut',
+    role: 'Cafe Manager',
     bio: 'Speaks four languages badly and one perfectly, which he says is the whole point of the exchange channels. Personally onboards every new language pod.',
-    tone: 'clay',
+    tone: 'sage',
     offset: 'lg:mt-6',
   },
   {
-    name: 'Dovile Petrauskaite',
-    role: 'Support Lead',
+    name: 'Cesus',
+    role: 'Cafe Manager',
     bio: 'Answers ticket number one thousand the same way she answered ticket one: slowly, kindly, and with way too many follow-up questions to make sure you are actually okay.',
     tone: 'sage',
     tilt: 'hover:rotate-1',
   },
   {
-    name: 'Tomás Herrera-Lindqvist',
-    role: 'Partnerships Lead',
+    name: 'Kiwi',
+    role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
-    tone: 'caramel',
+    tone: 'sage',
+    offset: 'lg:mt-10',
+  },
+  {
+    name: 'Billie Eilish',
+    role: 'Cafe Manager',
+    bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
+    tone: 'sage',
+    offset: 'lg:mt-10',
+  },
+  {
+    name: 'Umbra',
+    role: 'Cafe Manager',
+    bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
+    tone: 'sage',
+    offset: 'lg:mt-10',
+  },
+  {
+    name: 'Pat',
+    role: 'Cafe Manager',
+    bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
+    tone: 'sage',
     offset: 'lg:mt-10',
   },
 ]
@@ -98,7 +119,7 @@ function StaffPage() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="The People"
-              title="Eight people, nine time zones, one very long group chat"
+              title="Eleven people, nine time zones, one very long group chat"
               description="They moderate, they organize, they remember your order. Here is who keeps the lights warm at The Third Place."
             />
           </ScrollReveal>
