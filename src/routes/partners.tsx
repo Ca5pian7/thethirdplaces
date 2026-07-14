@@ -18,7 +18,7 @@ const monogramTones: Record<string, string> = {
 
 const partners = [
   {
-    slug: 'chapter-and-verse',
+    slug: 'Vp9J4VFmF9',
     name: 'Buddy Bunker',
     initials: 'BB',
     tone: 'coffee',
