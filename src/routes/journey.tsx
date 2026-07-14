@@ -18,65 +18,10 @@ type Milestone = {
 
 const milestones: Milestone[] = [
   {
-    date: 'March 2021',
-    title: 'Five chairs around a voice call',
-    body: 'The Third Place started as a private voice channel for six university friends scattered across three continents who missed talking over coffee between lectures.',
+    date: '13 March 2026',
+    title: 'The Creation of The Third PLace',
+    body: 'DK, Kai & Some friends started the creation of The Third Place',
     tone: 'caramel',
-  },
-  {
-    date: 'August 2021',
-    title: 'First 100 members',
-    body: 'A Reddit post titled "we built a cafe that never closes" brought in our first wave of strangers. Somehow, none of them left.',
-    tone: 'sage',
-  },
-  {
-    date: 'January 2022',
-    title: 'Daily Brew goes live',
-    body: 'Our signature voice hangout launched as a standing 7am invite with no agenda, just the sound of people making coffee in nine different kitchens.',
-    tone: 'caramel',
-  },
-  {
-    date: 'June 2022',
-    title: '"Sunday Slow Chats" and 18 language channels',
-    body: 'What began as one Spanish-practice thread grew into a rotating slate of Sunday conversation circles, each with its own regulars and its own inside jokes.',
-    tone: 'sage',
-  },
-  {
-    date: 'November 2022',
-    title: 'Passing 1,000 members',
-    body: 'We hit four digits the same week our first moderator, Amara, proposed the community charter that still governs how we handle conflict today.',
-    tone: 'clay',
-  },
-  {
-    date: 'April 2023',
-    title: 'Featured in Discord\'s community showcase',
-    body: 'A three-line mention in a showcase newsletter sent 600 new members through the door in a single weekend. We spent the following month just learning names.',
-    tone: 'caramel',
-  },
-  {
-    date: 'September 2023',
-    title: 'Partnership with Night Owls Study Hall',
-    body: 'Our first cross-server partnership brought a shared study-and-chat night that still runs every other Thursday, moderated jointly by both communities.',
-    tone: 'sage',
-  },
-  {
-    date: 'February 2024',
-    title: 'The Warm Cup Drive',
-    body: 'Members organized a two-week fundraiser for a Nairobi youth shelter, raising 3,842 dollars entirely through art auctions and a 24-hour co-op gaming marathon.',
-    tone: 'clay',
-  },
-  {
-    date: 'Today',
-    title: '4,127 members, 63 countries',
-    body: 'The table has grown, but the pot is still always on. We now host 96 voice hangouts a week across every time zone we can reach.',
-    tone: 'caramel',
-  },
-  {
-    date: 'What\'s next',
-    title: 'Thirty language channels, three cities',
-    body: 'We are working toward thirty active language-exchange channels and a pilot for small in-person meetups in Lagos, Manila, and Lisbon.',
-    tone: 'sage',
-    future: true,
   },
 ]
 
