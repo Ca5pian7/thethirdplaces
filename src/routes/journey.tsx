@@ -42,7 +42,7 @@ function JourneyPage() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="Our Story"
-              title="From a five-person voice call to a standing table for thousands"
+              title="This is beginning of The Third Place"
               description="Every community has an origin story. Ours smells like instant coffee and 2am timezone math. Here is how The Third Place grew up, one small decision at a time."
             />
           </ScrollReveal>
