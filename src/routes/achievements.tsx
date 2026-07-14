@@ -29,9 +29,9 @@ const achievements: Array<{
   {
     category: 'Milestone',
     tone: 'sage',
-    title: 'Creation of TTP',
+    title: 'Creation of TTC',
     description:
-      'This Day our The Third Place was created',
+      'This Day our The Third Café was created',
     span: true,
   },
 
