@@ -13,7 +13,7 @@ const links = [
   { to: '/contact', label: 'Contact' },
 ] as const
 
-const DISCORD_URL = 'https://discord.gg/thethirdplace'
+const DISCORD_URL = 'https://discord.gg/WBkpNH96pf'
 
 export function Nav() {
   const [open, setOpen] = useState(false)
@@ -24,7 +24,7 @@ export function Nav() {
         <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
           <CoffeeBean className="h-6 w-6 text-coffee group-hover:text-clay transition-colors" />
           <span className="font-display text-xl font-semibold tracking-tight text-espresso">
-            The Third Place
+            The Third Café
           </span>
         </Link>
 
