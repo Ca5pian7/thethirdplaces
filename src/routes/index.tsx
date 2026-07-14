@@ -9,20 +9,20 @@ export const Route = createFileRoute('/')({
   component: HomePage,
 })
 
-const DISCORD_URL = 'https://discord.gg/thethirdplace'
+const DISCORD_URL = 'https://discord.gg/uEDrEgxb8r'
 
 const stats = [
-  { value: '4,127', label: 'members from 63 countries' },
-  { value: '812', label: 'conversations this week' },
-  { value: '1,394', label: 'cups of coffee "shared" in #daily-brew' },
-  { value: '96', label: 'weekly voice hangouts hosted' },
+  { value: '105', label: 'members from 63 countries' },
+  { value: '3989', label: 'conversations this week' },
+  { value: '321', label: 'cups of coffee "shared" in #chat' },
+  { value: '1', label: 'weekly voice hangouts hosted' },
 ]
 
 const teasers = [
   {
     to: '/journey' as const,
     title: 'Our Journey',
-    body: 'From a five-person voice call in a college dorm to a standing table for thousands.',
+    body: 'From a little cafe to The Third Place.',
     icon: CupIcon,
   },
   {
