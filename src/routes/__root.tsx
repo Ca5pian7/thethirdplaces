@@ -16,12 +16,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'The Third Place — A Café for Conversations',
+        title: 'The Third Café — A Café for Conversations',
       },
       {
         name: 'description',
         content:
-          'The Third Place is an international Discord community built around slow conversation, warm company, and the ritual of a shared cup of coffee.',
+          'The Third Café is an international Discord community built around slow conversation, warm company, and the ritual of a shared cup of coffee.',
       },
     ],
     links: [
