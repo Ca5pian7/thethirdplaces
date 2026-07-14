@@ -10,7 +10,7 @@ export const Route = createFileRoute('/contact')({
   component: ContactPage,
 })
 
-const DISCORD_URL = 'https://discord.gg/thethirdplace'
+const DISCORD_URL = 'https://discord.gg/https://discord.gg/WBkpNH96pf'
 
 function encode(data: Record<string, string>): string {
   return Object.keys(data)
