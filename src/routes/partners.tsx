@@ -19,51 +19,11 @@ const monogramTones: Record<string, string> = {
 const partners = [
   {
     slug: 'chapter-and-verse',
-    name: 'Chapter & Verse',
-    initials: 'C&V',
+    name: 'Buddy Bunker',
+    initials: 'BB',
     tone: 'coffee',
     description:
-      'A cozy book club server running two parallel reads a month, one comfort pick and one that stretches you. Their margin-notes channel is basically a second book club.',
-  },
-  {
-    slug: 'the-slow-mornings-collective',
-    name: 'The Slow Mornings Collective',
-    initials: 'SM',
-    tone: 'sage',
-    description:
-      'A journaling and slow-living community built around gentle daily prompts and a no-hustle-culture rule. They co-host our Sunday reflection threads.',
-  },
-  {
-    slug: 'small-batch-roasters-guild',
-    name: 'Small Batch Roasters Guild',
-    initials: 'SBR',
-    tone: 'caramel',
-    description:
-      'Independent coffee roasters and home-brewing obsessives trading tasting notes, bean sourcing tips, and the occasional pour-over meltdown.',
-  },
-  {
-    slug: 'tandem-language-exchange',
-    name: 'Tandem Table',
-    initials: 'TT',
-    tone: 'clay',
-    description:
-      'A language exchange server pairing learners across 40+ languages for voice practice. Several of our members met their study partners here.',
-  },
-  {
-    slug: 'meeple-and-mug',
-    name: 'Meeple & Mug',
-    initials: 'M&M',
-    tone: 'sage',
-    description:
-      'A board games community that runs weekly async Codenames and a monthly "teach me your favorite game" voice night. Endlessly patient with rules explanations.',
-  },
-  {
-    slug: 'hearthlight-cozy-gaming',
-    name: 'Hearthlight Cozy Gaming',
-    initials: 'HL',
-    tone: 'caramel',
-    description:
-      'Dedicated to cozy and low-stakes video games, farm sims to walking simulators. Their screenshot channel is pure comfort scrolling.',
+      'Buddy Bunker your new online Home! From chatting, gaming and fun activities we have everything, and you are guaranteed to make friends along the way!',
   },
 ]
 
