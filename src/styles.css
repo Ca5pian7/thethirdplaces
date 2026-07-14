@@ -1,0 +1,109 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --color-cream: #faf3e8;
+  --color-cream-dark: #f2e6d2;
+  --color-parchment: #efe2c9;
+  --color-espresso: #3a2b22;
+  --color-espresso-light: #5c4636;
+  --color-coffee: #8a5a3b;
+  --color-caramel: #c68b56;
+  --color-sage: #8ba888;
+  --color-sage-dark: #6b8a68;
+  --color-clay: #b5654a;
+
+  --font-display: "Fraunces", "Playfair Display", serif;
+  --font-body: "Public Sans", "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(4deg); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+}
+
+.animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slower {
+    animation: none;
+  }
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* focus-visible warmth */
+:focus-visible {
+  outline: 2px solid var(--color-coffee);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

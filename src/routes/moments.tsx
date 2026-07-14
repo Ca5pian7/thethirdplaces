@@ -1,0 +1,242 @@
+import { useEffect, useState } from 'react'
+import { createFileRoute } from '@tanstack/react-router'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ScrollReveal } from '@/components/ScrollReveal'
+import { SectionHeading } from '@/components/ui/SectionHeading'
+import { CupIcon, ChatBubbleIcon, PeopleIcon, StringLightsIcon } from '@/components/icons'
+
+export const Route = createFileRoute('/moments')({
+  component: MomentsPage,
+})
+
+function DiceIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <rect x="6" y="6" width="36" height="36" rx="8" stroke="currentColor" strokeWidth="2.5" />
+      <circle cx="16" cy="16" r="2.4" fill="currentColor" />
+      <circle cx="32" cy="16" r="2.4" fill="currentColor" />
+      <circle cx="24" cy="24" r="2.4" fill="currentColor" />
+      <circle cx="16" cy="32" r="2.4" fill="currentColor" />
+      <circle cx="32" cy="32" r="2.4" fill="currentColor" />
+    </svg>
+  )
+}
+
+function BookIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M24 12c-3-3-9-4-16-3v27c7-1 13 0 16 3 3-3 9-4 16-3V9c-7-1-13 0-16 3Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+      <path d="M24 12v27" stroke="currentColor" strokeWidth="2.5" />
+    </svg>
+  )
+}
+
+type Tile = {
+  gradient: string
+  icon: (props: { className?: string }) => React.ReactElement
+  caption: string
+  aspect: string
+}
+
+const tiles: Tile[] = [
+  {
+    gradient: 'bg-gradient-to-br from-caramel/40 to-espresso/20',
+    icon: CupIcon,
+    caption: 'Daily Brew — Tuesday regulars',
+    aspect: 'h-72',
+  },
+  {
+    gradient: 'bg-gradient-to-tr from-sage/40 to-cream-dark/60',
+    icon: ChatBubbleIcon,
+    caption: 'Late-night debate club, 2am and still going',
+    aspect: 'h-48',
+  },
+  {
+    gradient: 'bg-gradient-to-b from-clay/40 to-espresso/25',
+    icon: PeopleIcon,
+    caption: 'Winter Market meetup, Berlin chapter',
+    aspect: 'h-96',
+  },
+  {
+    gradient: 'bg-gradient-to-br from-espresso/30 to-caramel/30',
+    icon: DiceIcon,
+    caption: 'Board game night, table three lost again',
+    aspect: 'h-56',
+  },
+  {
+    gradient: 'bg-gradient-to-tl from-sage-dark/30 to-sage/20',
+    icon: StringLightsIcon,
+    caption: 'Lights up for the anniversary voice hangout',
+    aspect: 'h-40',
+  },
+  {
+    gradient: 'bg-gradient-to-br from-caramel/35 to-clay/25',
+    icon: BookIcon,
+    caption: 'Quiet reading corner, #book-club check-in',
+    aspect: 'h-80',
+  },
+  {
+    gradient: 'bg-gradient-to-r from-espresso/25 to-sage/25',
+    icon: CupIcon,
+    caption: 'First coffee of the Tokyo timezone crew',
+    aspect: 'h-64',
+  },
+  {
+    gradient: 'bg-gradient-to-b from-clay/30 to-cream-dark/50',
+    icon: PeopleIcon,
+    caption: 'Community call, someone brought their cat',
+    aspect: 'h-52',
+  },
+  {
+    gradient: 'bg-gradient-to-tr from-caramel/45 to-espresso/15',
+    icon: ChatBubbleIcon,
+    caption: 'Newcomer welcome thread, 40 replies deep',
+    aspect: 'h-72',
+  },
+  {
+    gradient: 'bg-gradient-to-br from-sage/30 to-clay/20',
+    icon: DiceIcon,
+    caption: 'Trivia night finals, sudden-death round',
+    aspect: 'h-60',
+  },
+  {
+    gradient: 'bg-gradient-to-b from-espresso/25 to-sage-dark/20',
+    icon: StringLightsIcon,
+    caption: 'Porch lights, our one-year anniversary art',
+    aspect: 'h-44',
+  },
+  {
+    gradient: 'bg-gradient-to-tl from-caramel/30 to-espresso/30',
+    icon: BookIcon,
+    caption: 'Study hall regulars, finals-week solidarity',
+    aspect: 'h-88',
+  },
+]
+
+function TileArt({
+  tile,
+  className = '',
+  iconClassName = 'h-10 w-10',
+}: {
+  tile: Tile
+  className?: string
+  iconClassName?: string
+}) {
+  const Icon = tile.icon
+  return (
+    <div className={`relative w-full overflow-hidden ${tile.gradient} ${className}`}>
+      <Icon className={`absolute inset-0 m-auto text-espresso/50 ${iconClassName}`} />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/50 to-transparent p-4 pt-10">
+        <p className="font-display text-sm font-semibold text-cream sm:text-base">
+          {tile.caption}
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function MomentsPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (openIndex === null) return
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setOpenIndex(null)
+      if (e.key === 'ArrowRight') setOpenIndex((i) => (i === null ? i : (i + 1) % tiles.length))
+      if (e.key === 'ArrowLeft')
+        setOpenIndex((i) => (i === null ? i : (i - 1 + tiles.length) % tiles.length))
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [openIndex])
+
+  const current = openIndex === null ? null : tiles[openIndex]
+
+  return (
+    <div>
+      <section className="mx-auto max-w-7xl px-5 pb-6 pt-16 sm:px-8 sm:pt-20">
+        <ScrollReveal>
+          <SectionHeading
+            eyebrow="Gallery"
+            title="Moments from around the table"
+            description="A scrapbook of the small, ordinary things that made this community feel like home. Click any tile for a closer look."
+          />
+        </ScrollReveal>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
+        <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
+          {tiles.map((tile, i) => (
+            <ScrollReveal key={tile.caption} delay={(i % 6) * 70} className="mb-5 break-inside-avoid">
+              <button
+                type="button"
+                onClick={() => setOpenIndex(i)}
+                aria-label={`Open photo: ${tile.caption}`}
+                className="block w-full cursor-pointer rounded-2xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+              >
+                <TileArt
+                  tile={tile}
+                  className={`${tile.aspect} rounded-2xl shadow-[0_8px_24px_-12px_rgba(58,43,34,0.35)] transition-transform duration-300 hover:scale-[1.02]`}
+                />
+              </button>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {current && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-espresso/80 p-5 backdrop-blur-sm transition-opacity duration-300"
+          onClick={() => setOpenIndex(null)}
+        >
+          <div
+            className="relative w-full max-w-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <TileArt
+              tile={current}
+              className="h-[60vh] max-h-[520px] rounded-3xl shadow-2xl"
+              iconClassName="h-16 w-16"
+            />
+
+            <button
+              type="button"
+              onClick={() => setOpenIndex(null)}
+              aria-label="Close"
+              className="absolute -top-4 -right-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            <button
+              type="button"
+              onClick={() =>
+                setOpenIndex((i) => (i === null ? i : (i - 1 + tiles.length) % tiles.length))
+              }
+              aria-label="Previous photo"
+              className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setOpenIndex((i) => (i === null ? i : (i + 1) % tiles.length))}
+              aria-label="Next photo"
+              className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
