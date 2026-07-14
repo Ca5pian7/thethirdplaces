@@ -19,8 +19,8 @@ type Milestone = {
 const milestones: Milestone[] = [
   {
     date: '13 March 2026',
-    title: 'The Creation of The Third PLace',
-    body: 'DK, Kai & Some friends started the creation of The Third Place',
+    title: 'The Creation of The Third Café,
+    body: 'DK, Kai & Some friends started the creation of The Third Café,
     tone: 'caramel',
   },
 ]
@@ -42,7 +42,7 @@ function JourneyPage() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="Our Story"
-              title="This is beginning of The Third Place"
+              title="This is beginning of The Third Café"
               description="Every community has an origin story. Ours smells like instant coffee and 2am timezone math. Here is how The Third Place grew up, one small decision at a time."
             />
           </ScrollReveal>
