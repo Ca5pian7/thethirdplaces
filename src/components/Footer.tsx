@@ -56,7 +56,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <CoffeeBean className="h-6 w-6 text-coffee" />
               <span className="font-display text-lg font-semibold text-espresso">
-                The Third Place
+                The Third Café
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-espresso-light">
