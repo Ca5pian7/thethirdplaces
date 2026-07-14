@@ -11,10 +11,10 @@ export const Route = createFileRoute('/achievements')({
 })
 
 const counters = [
-  { value: 4127, label: 'members and counting', suffix: '' },
-  { value: 58940, label: 'messages sent this month', suffix: '' },
-  { value: 142, label: 'community events hosted', suffix: '' },
-  { value: 37, label: 'countries represented', suffix: '' },
+  { value: 106, label: 'members and counting', suffix: '' },
+  { value: 3798, label: 'messages sent this month', suffix: '' },
+  { value: 0, label: 'community events hosted', suffix: '' },
+  { value: 39, label: 'countries represented', suffix: '' },
 ]
 
 type BadgeTone = 'sage' | 'caramel' | 'clay'
@@ -27,56 +27,14 @@ const achievements: Array<{
   span?: boolean
 }> = [
   {
-    category: 'Event Winner',
-    tone: 'clay',
-    title: 'Trivia Night Champion — Priya Nakamura',
-    description:
-      'Six-time undefeated champion of our Friday Trivia Night, including a legendary sweep of the all-café-history themed round.',
-  },
-  {
-    category: 'Event Winner',
-    tone: 'clay',
-    title: 'Karaoke Cup — Diego Fuentes',
-    description:
-      'Took home the inaugural Karaoke Cup with a rendition of a 2000s power ballad that is still referenced in #daily-brew.',
-  },
-  {
     category: 'Milestone',
     tone: 'sage',
-    title: 'Server boosted to Level 3 by community vote',
+    title: 'Creation of TTP',
     description:
-      'Members pooled boosts over a single weekend to unlock higher-quality voice channels and a new emoji slate, all without staff asking.',
+      'This Day our The Third Place was created',
     span: true,
   },
-  {
-    category: 'Event Winner',
-    tone: 'clay',
-    title: 'Cozy Games Speedrun — Team Chamomile',
-    description:
-      'Fastest cooperative clear of a cozy farming sim during our Cozy Games Weekend, edging out four other teams by eleven seconds.',
-  },
-  {
-    category: 'Milestone',
-    tone: 'sage',
-    title: 'First member-run coffee-tasting livestream',
-    description:
-      'A member walked 200 concurrent viewers through a comparative tasting of three single-origin roasts, live from their kitchen.',
-  },
-  {
-    category: 'Recognition',
-    tone: 'caramel',
-    title: "Featured in Discord's community showcase newsletter",
-    description:
-      'The Third Place was highlighted in the Spring 2025 community showcase for our approach to slow, low-pressure conversation channels.',
-    span: true,
-  },
-  {
-    category: 'Recognition',
-    tone: 'caramel',
-    title: 'Nominated for "Best Small Community" fan award',
-    description:
-      'Nominated by members of a partner server for an independent community awards roundup celebrating servers under 10,000 members.',
-  },
+
 ]
 
 function AnimatedCounter({
