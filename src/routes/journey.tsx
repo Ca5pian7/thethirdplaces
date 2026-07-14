@@ -19,8 +19,8 @@ type Milestone = {
 const milestones: Milestone[] = [
   {
     date: '13 March 2026',
-    title: 'The Creation of The Third Café'
-    body: 'DK, Kai & Some friends started the creation of The Third Café'
+    title: 'The Creation of The Third Café',
+    body: 'DK, Kai & Some friends started the creation of The Third Café',
     tone: 'caramel',
   },
 ]
