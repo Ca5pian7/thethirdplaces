@@ -22,13 +22,13 @@ const teasers = [
   {
     to: '/journey' as const,
     title: 'Our Journey',
-    body: 'From a little cafe to The Third Place.',
+    body: 'From a little cafe to The Third Café.',
     icon: CupIcon,
   },
   {
     to: '/staff' as const,
     title: 'Meet the Staff',
-    body: 'Nine people across nine time zones who keep the lights warm and the chat kind.',
+    body: 'Eleven people across nine time zones who keep the lights warm and the chat kind.',
     icon: PeopleIcon,
   },
   {
