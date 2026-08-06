@@ -145,7 +145,7 @@ function StaffPage() {
                 <div className="flex items-center gap-4">
                   <img
                     src={avatarUrl(person.slug)}
-                    alt={`Placeholder avatar for ${person.name}`}
+                    alt={`Portrait avatar of ${person.name}, ${person.role} at The Third Café`}
                     className="h-16 w-16 shrink-0 rounded-full border border-espresso/10 bg-cream-dark"
                     loading="lazy"
                   />

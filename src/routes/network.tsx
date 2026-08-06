@@ -1,20 +1,69 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Gamepad2, Sparkles, Trophy, Users2 } from 'lucide-react'
+import { Gamepad2, Sparkles, Trophy, Users2, Sprout, Stethoscope, Moon, Fish, Swords, ExternalLink } from 'lucide-react'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { LinkButton } from '@/components/ui/Button'
-import { CoffeeBean, SteamWisp } from '@/components/icons'
+import { CoffeeBean, SteamWisp, DiscordIcon } from '@/components/icons'
 
 export const Route = createFileRoute('/network')({
+  head: () => ({
+    meta: [
+      {
+        title: 'The Network — The Third Café',
+      },
+      {
+        name: 'description',
+        content:
+          'One network, many tables — explore the growing group of communities connected to The Third Café, including TTC Roblox.',
+      },
+    ],
+  }),
   component: NetworkPage,
 })
 
 // TODO: replace with the real TTC Roblox invite link once the server is ready to receive members.
 const TTC_ROBLOX_URL = 'https://discord.gg/REPLACE_WITH_TTC_ROBLOX_INVITE'
 
-const games = ['Grow a Garden', 'Animals Hospital', '99 Nights', 'Blox Fruits', 'Rivals']
+// TODO: swap `robloxUrl` for each game's real Roblox experience URL (roblox.com/games/<placeId>)
+// once TTC Roblox publishes its own experiences — these fall back to a Roblox search for now.
+// TODO: swap `discordUrl` for a deep link to that game's dedicated category/channel once TTC
+// Roblox's channel structure is finalized — these fall back to the main server invite for now.
+const ttcGames = [
+  {
+    name: 'Grow a Garden 2',
+    icon: Sprout,
+    robloxUrl: 'https://www.roblox.com/discover/?Keyword=Grow%20a%20Garden%202',
+    discordUrl: TTC_ROBLOX_URL,
+  },
+  {
+    name: 'Animals Hospital',
+    icon: Stethoscope,
+    robloxUrl: 'https://www.roblox.com/discover/?Keyword=Animals%20Hospital',
+    discordUrl: TTC_ROBLOX_URL,
+  },
+  {
+    name: '99 Nights',
+    icon: Moon,
+    robloxUrl: 'https://www.roblox.com/discover/?Keyword=99%20Nights',
+    discordUrl: TTC_ROBLOX_URL,
+  },
+  {
+    name: 'Blox Fruits',
+    icon: Fish,
+    robloxUrl: 'https://www.roblox.com/discover/?Keyword=Blox%20Fruits',
+    discordUrl: TTC_ROBLOX_URL,
+  },
+  {
+    name: 'Rivals',
+    icon: Swords,
+    robloxUrl: 'https://www.roblox.com/discover/?Keyword=Rivals',
+    discordUrl: TTC_ROBLOX_URL,
+  },
+] as const
+
+const games = ttcGames.map((game) => game.name)
 
 const whyPoints = [
   {
@@ -134,6 +183,62 @@ function NetworkPage() {
               </div>
             </Card>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* TTC Roblox games */}
+      <section className="mx-auto max-w-7xl px-5 py-4 sm:px-8 sm:py-8">
+        <ScrollReveal>
+          <SectionHeading
+            eyebrow="TTC Roblox"
+            title="Jump straight into a game"
+            description="Each of these has its own dedicated category inside TTC Roblox. Play the game on Roblox, or join its section on Discord to find teammates first."
+          />
+        </ScrollReveal>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {ttcGames.map((game, i) => {
+            const Icon = game.icon
+            return (
+              <ScrollReveal key={game.name} delay={(i % 3) * 90}>
+                <Card className="flex h-full flex-col gap-4 p-5">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sage/15 text-sage-dark"
+                      role="img"
+                      aria-label={`${game.name} game icon`}
+                    >
+                      <Icon className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-display text-base font-semibold leading-snug text-espresso">
+                      {game.name}
+                    </h3>
+                  </div>
+                  <div className="mt-auto flex flex-col gap-2">
+                    <LinkButton
+                      href={game.robloxUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="primary"
+                      className="flex-1 !px-4 !py-2.5 text-sm"
+                    >
+                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      Play on Roblox
+                    </LinkButton>
+                    <LinkButton
+                      href={game.discordUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="ghost"
+                      className="flex-1 !px-4 !py-2.5 text-sm"
+                    >
+                      <DiscordIcon className="h-4 w-4" />
+                      Join in Discord
+                    </LinkButton>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            )
+          })}
         </div>
       </section>
 

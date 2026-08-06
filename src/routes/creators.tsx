@@ -7,6 +7,18 @@ import { LinkButton } from '@/components/ui/Button'
 import { CoffeeBean } from '@/components/icons'
 
 export const Route = createFileRoute('/creators')({
+  head: () => ({
+    meta: [
+      {
+        title: 'Creator Program — The Third Café',
+      },
+      {
+        name: 'description',
+        content:
+          'Perks, shoutouts, and collabs for YouTubers, streamers, artists, and developers who join the Creator Program at The Third Café.',
+      },
+    ],
+  }),
   component: CreatorsPage,
 })
 
