@@ -91,6 +91,40 @@ export function PeopleIcon({ className = '' }: { className?: string }) {
   )
 }
 
+export function DiscordIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M8 9.5c1.5 1 5 1 8 0M9 15c-3 0-5-1.5-5-1.5S5 8 6.5 6.5C7.5 5.5 9 5.2 9 5.2l.7 1.3M15 15c3 0 5-1.5 5-1.5S19 8 17.5 6.5C16.5 5.5 15 5.2 15 5.2l-.7 1.3"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <circle cx="9.5" cy="12" r="1.3" fill="currentColor" />
+      <circle cx="14.5" cy="12" r="1.3" fill="currentColor" />
+      <path d="M9 15c0 2-1 3-1 3s5 1.5 8 0c0 0-1-1-1-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function InstagramIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17" cy="7" r="1" fill="currentColor" />
+    </svg>
+  )
+}
+
+export function XIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function StringLightsIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 24" fill="none" className={className} aria-hidden="true">

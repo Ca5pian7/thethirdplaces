@@ -11,6 +11,7 @@ export const Route = createFileRoute('/staff')({
 
 type StaffMember = {
   name: string
+  slug: string
   role: string
   bio: string
   tone: 'sage' | 'caramel' | 'clay'
@@ -21,6 +22,7 @@ type StaffMember = {
 const staff: StaffMember[] = [
   {
     name: 'DK',
+    slug: 'dk',
     role: 'Cafe Owner',
     bio: 'Im Coder and I like to building things and bots, also an professional yapper.',
     tone: 'caramel',
@@ -28,6 +30,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Kai',
+    slug: 'kai',
     role: 'Cafe Owner',
     bio: 'Hello, Im Kai, I like computer,space & games.',
     tone: 'caramel',
@@ -35,6 +38,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Erika',
+    slug: 'erika',
     role: 'Assistant Cafe Owner',
     bio: 'Handles conflict the way he handles espresso, quickly and without bitterness. Wrote most of the community charter on a plane.',
     tone: 'clay',
@@ -42,6 +46,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Huggebugg',
+    slug: 'huggebugg',
     role: 'Assistant Cafe Owner',
     bio: 'Runs the Sunday Slow Chats and refuses to let anyone leave without sharing one good thing from their week. Has a backup plan for every backup plan.',
     tone: 'clay',
@@ -49,6 +54,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Someone',
+    slug: 'someone',
     role: 'Cafe Manager',
     bio: 'Turns members\' doodles and half-finished poems into the monthly gallery drops everyone screenshots. Once ran a 30-hour charity art auction on no sleep.',
     tone: 'sage',
@@ -56,6 +62,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Nohagut',
+    slug: 'nohagut',
     role: 'Cafe Manager',
     bio: 'Speaks four languages badly and one perfectly, which he says is the whole point of the exchange channels. Personally onboards every new language pod.',
     tone: 'sage',
@@ -63,6 +70,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Cesus',
+    slug: 'cesus',
     role: 'Cafe Manager',
     bio: 'Answers ticket number one thousand the same way she answered ticket one: slowly, kindly, and with way too many follow-up questions to make sure you are actually okay.',
     tone: 'sage',
@@ -70,6 +78,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Kiwi',
+    slug: 'kiwi',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
@@ -77,6 +86,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Billie Eilish',
+    slug: 'billie-eilish',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
@@ -84,6 +94,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Umbra',
+    slug: 'umbra',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
@@ -91,6 +102,7 @@ const staff: StaffMember[] = [
   },
   {
     name: 'Pat',
+    slug: 'pat',
     role: 'Cafe Manager',
     bio: 'Negotiated the Night Owls Study Hall partnership over a single very long voice call and has been the go-between for cross-server events ever since.',
     tone: 'sage',
@@ -98,9 +110,8 @@ const staff: StaffMember[] = [
   },
 ]
 
-function avatarUrl(name: string) {
-  const seed = encodeURIComponent(name)
-  return `https://api.dicebear.com/9.x/notionists/svg?seed=${seed}&backgroundColor=f2e6d2,efe2c9`
+function avatarUrl(slug: string) {
+  return `/images/staff/${slug}-pfp.png`
 }
 
 function StaffPage() {
@@ -133,8 +144,8 @@ function StaffPage() {
               <Card className={`flex h-full flex-col gap-4 p-7 ${person.tilt ?? ''}`}>
                 <div className="flex items-center gap-4">
                   <img
-                    src={avatarUrl(person.name)}
-                    alt={`Illustrated avatar of ${person.name}`}
+                    src={avatarUrl(person.slug)}
+                    alt={`Placeholder avatar for ${person.name}`}
                     className="h-16 w-16 shrink-0 rounded-full border border-espresso/10 bg-cream-dark"
                     loading="lazy"
                   />

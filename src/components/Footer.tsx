@@ -1,51 +1,25 @@
 import { Link } from '@tanstack/react-router'
-import { CoffeeBean } from '@/components/icons'
+import { CoffeeBean, DiscordIcon, InstagramIcon, XIcon } from '@/components/icons'
 
 const DISCORD_URL = 'https://discord.gg/WBkpNH96pf'
 
 const pages = [
   { to: '/', label: 'Home' },
+  { to: '/network', label: 'Network' },
   { to: '/journey', label: 'Journey' },
   { to: '/staff', label: 'Staff' },
   { to: '/partners', label: 'Partners' },
+  { to: '/creators', label: 'Creators' },
   { to: '/achievements', label: 'Achievements' },
   { to: '/moments', label: 'Moments' },
   { to: '/contact', label: 'Contact' },
 ] as const
 
-function DiscordIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M8 9.5c1.5 1 5 1 8 0M9 15c-3 0-5-1.5-5-1.5S5 8 6.5 6.5C7.5 5.5 9 5.2 9 5.2l.7 1.3M15 15c3 0 5-1.5 5-1.5S19 8 17.5 6.5C16.5 5.5 15 5.2 15 5.2l-.7 1.3"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <circle cx="9.5" cy="12" r="1.3" fill="currentColor" />
-      <circle cx="14.5" cy="12" r="1.3" fill="currentColor" />
-      <path d="M9 15c0 2-1 3-1 3s5 1.5 8 0c0 0-1-1-1-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function InstagramIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="17" cy="7" r="1" fill="currentColor" />
-    </svg>
-  )
-}
-
-function XIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  )
-}
+const socials = [
+  { href: DISCORD_URL, label: 'Discord', Icon: DiscordIcon },
+  { href: 'https://instagram.com/thethirdplace', label: 'Instagram', Icon: InstagramIcon },
+  { href: 'https://x.com/thethirdplace', label: 'X', Icon: XIcon },
+] as const
 
 export function Footer() {
   return (
@@ -85,35 +59,23 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wide text-espresso">
               Find us elsewhere
             </h3>
-            <div className="mt-4 flex items-center gap-3">
-              <a
-                href={DISCORD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Join us on Discord"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
-              >
-                <DiscordIcon className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com/thethirdplace"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
-              >
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-              <a
-                href="https://x.com/thethirdplace"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on X"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
-              >
-                <XIcon className="h-5 w-5" />
-              </a>
-            </div>
+            <ul className="mt-4 flex flex-col gap-3">
+              {socials.map(({ href, label, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 text-sm text-espresso-light transition-colors hover:text-espresso"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-espresso/15">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

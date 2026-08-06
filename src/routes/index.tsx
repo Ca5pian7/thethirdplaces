@@ -1,15 +1,31 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Link } from '@tanstack/react-router'
+import { Sparkles } from 'lucide-react'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
-import { CoffeeBean, SteamWisp, ChatBubbleIcon, PeopleIcon, CupIcon } from '@/components/icons'
+import {
+  CoffeeBean,
+  SteamWisp,
+  ChatBubbleIcon,
+  PeopleIcon,
+  CupIcon,
+  DiscordIcon,
+  InstagramIcon,
+  XIcon,
+} from '@/components/icons'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
 })
 
 const DISCORD_URL = 'https://discord.gg/uEDrEgxb8r'
+
+const socials = [
+  { href: DISCORD_URL, label: 'Discord', Icon: DiscordIcon },
+  { href: 'https://instagram.com/thethirdplace', label: 'Instagram', Icon: InstagramIcon },
+  { href: 'https://x.com/thethirdplace', label: 'X', Icon: XIcon },
+] as const
 
 const stats = [
   { value: '105', label: 'members from 63 countries' },
@@ -19,6 +35,12 @@ const stats = [
 ]
 
 const teasers = [
+  {
+    to: '/network' as const,
+    title: 'The Network',
+    body: 'One network, many tables — see the communities connected to The Third Café.',
+    icon: Sparkles,
+  },
   {
     to: '/journey' as const,
     title: 'Our Journey',
@@ -36,6 +58,12 @@ const teasers = [
     title: 'Our Partners',
     body: 'Communities we trust enough to send our own members to when they visit.',
     icon: ChatBubbleIcon,
+  },
+  {
+    to: '/creators' as const,
+    title: 'Creator Program',
+    body: 'Grow alongside the community — perks and collabs for creators who join the table.',
+    icon: CupIcon,
   },
   {
     to: '/achievements' as const,
@@ -102,6 +130,23 @@ function HomePage() {
               >
                 Read our story
               </Link>
+            </div>
+            <div className="mt-7 flex items-center gap-3">
+              <span className="text-sm text-espresso-light">Find us elsewhere:</span>
+              <div className="flex items-center gap-2">
+                {socials.map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow us on ${label}`}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
+                  >
+                    <Icon className="h-4.5 w-4.5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
