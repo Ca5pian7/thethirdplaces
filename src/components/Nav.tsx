@@ -5,9 +5,11 @@ import { CoffeeBean } from '@/components/icons'
 
 const links = [
   { to: '/', label: 'Home' },
+  { to: '/network', label: 'Network' },
   { to: '/journey', label: 'Journey' },
   { to: '/staff', label: 'Staff' },
   { to: '/partners', label: 'Partners' },
+  { to: '/creators', label: 'Creators' },
   { to: '/achievements', label: 'Achievements' },
   { to: '/moments', label: 'Moments' },
   { to: '/contact', label: 'Contact' },

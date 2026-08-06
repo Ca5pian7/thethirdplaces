@@ -5,6 +5,7 @@ import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
 import { Button, LinkButton } from '@/components/ui/Button'
+import { DiscordIcon, InstagramIcon, XIcon } from '@/components/icons'
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
@@ -18,39 +19,6 @@ function encode(data: Record<string, string>): string {
     .join('&')
 }
 
-function DiscordIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M8 9.5c1.5 1 5 1 8 0M9 15c-3 0-5-1.5-5-1.5S5 8 6.5 6.5C7.5 5.5 9 5.2 9 5.2l.7 1.3M15 15c3 0 5-1.5 5-1.5S19 8 17.5 6.5C16.5 5.5 15 5.2 15 5.2l-.7 1.3"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <circle cx="9.5" cy="12" r="1.3" fill="currentColor" />
-      <circle cx="14.5" cy="12" r="1.3" fill="currentColor" />
-      <path d="M9 15c0 2-1 3-1 3s5 1.5 8 0c0 0-1-1-1-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function InstagramIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
-      <circle cx="17" cy="7" r="1" fill="currentColor" />
-    </svg>
-  )
-}
-
-function XIcon({ className = '' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  )
-}
 
 const inputClasses =
   'w-full rounded-xl border border-espresso/20 bg-cream/50 px-4 py-3 text-espresso placeholder:text-espresso-light/60 transition-colors focus-visible:outline-none focus-visible:border-coffee'
