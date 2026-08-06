@@ -2,10 +2,12 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { NotFound } from '@/components/NotFound'
 
 import '../styles.css'
 
 export const Route = createRootRoute({
+  notFoundComponent: NotFound,
   head: () => ({
     meta: [
       {
