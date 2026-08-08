@@ -47,7 +47,7 @@ const perks = [
   },
   {
     icon: Megaphone,
-    title: 'Shoutouts across the TTC network(Only Partnered Creator)',
+    title: 'Uploads across the TTC network',
     body: "Your uploads, streams, and drops get shared in our announcement channels and across TTC's growing network of communities.",
   },
   {
