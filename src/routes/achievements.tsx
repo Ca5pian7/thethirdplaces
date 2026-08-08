@@ -11,8 +11,8 @@ export const Route = createFileRoute('/achievements')({
 })
 
 const counters = [
-  { value: 106, label: 'members and counting', suffix: '' },
-  { value: 3798, label: 'messages sent this month', suffix: '' },
+  { value: 326, label: 'members and counting', suffix: '' },
+  { value: 8124, label: 'messages sent this month', suffix: '' },
   { value: 0, label: 'community events hosted', suffix: '' },
   { value: 39, label: 'countries represented', suffix: '' },
 ]
@@ -31,7 +31,7 @@ const achievements: Array<{
     tone: 'sage',
     title: 'Creation of TTC',
     description:
-      'This Day our The Third Café was created',
+      'On 13 July our The Third Café was created',
     span: true,
   },
 
