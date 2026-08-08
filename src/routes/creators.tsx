@@ -15,7 +15,7 @@ export const Route = createFileRoute('/creators')({
       {
         name: 'description',
         content:
-          'Perks, shoutouts, and collabs for YouTubers, streamers, artists, and developers who join the Creator Program at The Third Café.',
+          'Perks, shoutouts, and collabs for YouTubers who join the Creator Program at The Third Café.',
       },
     ],
   }),
@@ -34,7 +34,7 @@ const perks = [
   },
   {
     icon: Megaphone,
-    title: 'Shoutouts across the TTC network',
+    title: 'Shoutouts across the TTC network(Only Partnered Creator)',
     body: "Your uploads, streams, and drops get shared in our announcement channels and across TTC's growing network of communities.",
   },
   {
@@ -55,31 +55,16 @@ const lookingFor = [
     title: 'Content creators',
     body: 'YouTubers and video essayists making anything from vlogs to deep dives — regular uploads welcome, viral ones not required.',
   },
-  {
-    icon: Paintbrush,
-    title: 'Artists',
-    body: 'Illustrators, animators, and doodlers who want a warm place to share works-in-progress and finished pieces alike.',
-  },
-  {
-    icon: Code2,
-    title: 'Developers',
-    body: 'Bot builders, indie devs, and tinkerers shipping small tools and side projects worth talking about over coffee.',
-  },
-  {
-    icon: Radio,
-    title: 'Streamers',
-    body: 'Regulars on Twitch, YouTube, or elsewhere who want a home crowd that shows up for the low-key streams too.',
-  },
 ]
 
 const steps = [
   {
     title: 'Join the Discord',
-    body: 'Pull up a chair — the Creator Program lives inside The Third Café server.',
+    body: 'Pull up a chair as the Creator Program lives inside The Third Café server.',
   },
   {
-    title: 'Fill out the application',
-    body: 'A short form about what you make and where people can find it. No follower minimums, just honesty.',
+    title: 'Checkout Requirements & Fill out the application',
+    body: 'First u need to checkout the requirements and then fill a short form about what you make and where people can find it. 500+ Subscriber minimums or it will be free if +10 k Subscribers.',
   },
   {
     title: 'Chat with the Creator Team',
@@ -106,7 +91,7 @@ function CreatorsPage() {
             <SectionHeading
               eyebrow="Creator Program"
               title="Pull up a chair, bring your craft"
-              description="The Creator Program exists to help YouTubers, streamers, artists, and developers grow alongside the community instead of shouting into it alone. Bring what you make, and we'll help people find it."
+              description="The Creator Program exists to help YouTubers grow alongside the community instead of shouting into it alone. Bring what you make, and we'll help people find it."
             />
           </ScrollReveal>
           <ScrollReveal delay={120}>
