@@ -41,14 +41,19 @@ type Tile = {
   icon: (props: { className?: string }) => React.ReactElement
   caption: string
   aspect: string
+  image?: string
 }
 
+// To add a real photo: drop the file in public/images/moments/ and set
+// `image` to its path (e.g. '/images/moments/your-photo.jpg') on a tile.
+// The gradient/icon art is only used as a fallback for tiles without an image.
 const tiles: Tile[] = [
   {
     gradient: 'bg-gradient-to-br from-caramel/40 to-espresso/20',
     icon: CupIcon,
     caption: 'Daily Brew — Tuesday regulars',
     aspect: 'h-72',
+    image: '/images/moments/fake.png',
   },
 ]
 
@@ -64,7 +69,15 @@ function TileArt({
   const Icon = tile.icon
   return (
     <div className={`relative w-full overflow-hidden ${tile.gradient} ${className}`}>
-      <Icon className={`absolute inset-0 m-auto text-espresso/50 ${iconClassName}`} />
+      {tile.image ? (
+        <img
+          src={tile.image}
+          alt={tile.caption}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      ) : (
+        <Icon className={`absolute inset-0 m-auto text-espresso/50 ${iconClassName}`} />
+      )}
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/50 to-transparent p-4 pt-10">
         <p className="font-display text-sm font-semibold text-cream sm:text-base">
           {tile.caption}
