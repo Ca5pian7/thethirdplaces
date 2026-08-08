@@ -77,6 +77,14 @@ const staff: StaffMember[] = [
     offset: 'hover:-rotate-1',
   },
   {
+    name: 'Erika',
+    slug: 'erika',
+    role: 'Cafe Manager',
+    bio: ' Me always lurk on the chat and sometimes talk to people',
+    tone: 'sage',
+    offset: 'hover:-rotate-1',
+  },
+  {
     name: 'Pat',
     slug: 'pat',
     role: 'Cafe Manager',
