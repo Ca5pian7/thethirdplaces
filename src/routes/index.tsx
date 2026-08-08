@@ -28,9 +28,9 @@ const socials = [
 ] as const
 
 const stats = [
-  { value: '105', label: 'members from 63 countries' },
-  { value: '3989', label: 'conversations this week' },
-  { value: '321', label: 'cups of coffee "shared" in #chat' },
+  { value: '326', label: 'members from 63 countries' },
+  { value: '8124', label: 'conversations this week' },
+  { value: '9210', label: 'cups of coffee "shared" in #chat' },
   { value: '1', label: 'weekly voice hangouts hosted' },
 ]
 
