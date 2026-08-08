@@ -12,7 +12,7 @@ export const Route = createFileRoute('/achievements')({
 
 const counters = [
   { value: 326, label: 'members and counting', suffix: '' },
-  { value: 8124, label: 'messages sent this month', suffix: '' },
+  { value: 54337, label: 'messages sent this month', suffix: '' },
   { value: 0, label: 'community events hosted', suffix: '' },
   { value: 39, label: 'countries represented', suffix: '' },
 ]
