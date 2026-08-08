@@ -1,5 +1,18 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Star, Megaphone, Sparkles, Users2, Video, Paintbrush, Code2, Radio } from 'lucide-react'
+import {
+  Star,
+  Megaphone,
+  Sparkles,
+  Users2,
+  Video,
+  Paintbrush,
+  Code2,
+  Radio,
+  Crown,
+  Gift,
+  Handshake,
+  BadgeCheck,
+} from 'lucide-react'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
@@ -54,6 +67,47 @@ const lookingFor = [
     icon: Video,
     title: 'Content creators',
     body: 'YouTubers and video essayists making anything from vlogs to deep dives — regular uploads welcome, viral ones not required.',
+  },
+]
+
+const partneredPerks = [
+  {
+    icon: Crown,
+    title: 'Partnered Creator badge & role',
+    body: 'A distinct badge and role that marks you out as a Partnered Creator — the top tier of the program.',
+  },
+  {
+    icon: Megaphone,
+    title: 'Priority shoutouts across the TTC network',
+    body: 'Your uploads and drops get front-of-line placement in announcement channels and across the wider TTC network, ahead of standard Creator Program shoutouts.',
+  },
+  {
+    icon: Gift,
+    title: 'Exclusive giveaways & sponsorship opportunities',
+    body: "First access to giveaways, merch drops, and sponsorship opportunities that come through the server.",
+  },
+  {
+    icon: Handshake,
+    title: 'A direct line to staff & the Creator Team',
+    body: 'Ongoing check-ins with the Creator Team for feedback, collab introductions, and a say in how the program evolves.',
+  },
+]
+
+const verifiedPoints = [
+  {
+    icon: BadgeCheck,
+    title: 'Who it recognizes',
+    body: 'Musicians, artists, streamers, developers, and other notable figures who already carry a following or reputation outside the server.',
+  },
+  {
+    icon: Sparkles,
+    title: 'How it works',
+    body: "Verified isn't applied for through a form — reach out to staff with a link to your work or profile and the team reviews it case by case.",
+  },
+  {
+    icon: Users2,
+    title: 'How it differs from the Creator Program',
+    body: "Verified is recognition, not access — it doesn't include Creator Program perks like shoutouts or collab introductions. It just makes sure the community knows who they're talking to.",
   },
 ]
 
@@ -127,6 +181,35 @@ function CreatorsPage() {
         </div>
       </section>
 
+      {/* Partnered Creator */}
+      <section className="border-y border-espresso/10 bg-parchment/50">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Next level"
+              title="Partnered Creator — for the ones who've grown with us"
+              description="Partnered Creator is the top tier of the program, reserved for members who've stuck around, stayed active, and grown alongside the community. It isn't a separate application — it's offered to Creator Program members the Creator Team sees consistently showing up."
+            />
+          </ScrollReveal>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {partneredPerks.map((perk, i) => {
+              const Icon = perk.icon
+              return (
+                <ScrollReveal key={perk.title} delay={(i % 4) * 90}>
+                  <Card className="flex h-full flex-col gap-4 p-6">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-clay/15 text-clay">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold text-espresso">{perk.title}</h3>
+                    <p className="text-sm leading-relaxed text-espresso-light">{perk.body}</p>
+                  </Card>
+                </ScrollReveal>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Who we're looking for */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <ScrollReveal>
@@ -182,6 +265,33 @@ function CreatorsPage() {
               </LinkButton>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Verified role */}
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+        <ScrollReveal>
+          <SectionHeading
+            eyebrow="Recognition"
+            title="Verified — for the well-known faces at the table"
+            description="Verified is a separate role from the Creator Program, given to artists, creators, developers, and other well-known figures joining the server, so the community can recognize who they're talking to right away."
+          />
+        </ScrollReveal>
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {verifiedPoints.map((point, i) => {
+            const Icon = point.icon
+            return (
+              <ScrollReveal key={point.title} delay={i * 100}>
+                <Card className="flex h-full flex-col gap-4 p-6">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sage/15 text-sage-dark">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-espresso">{point.title}</h3>
+                  <p className="text-sm leading-relaxed text-espresso-light">{point.body}</p>
+                </Card>
+              </ScrollReveal>
+            )
+          })}
         </div>
       </section>
     </div>
