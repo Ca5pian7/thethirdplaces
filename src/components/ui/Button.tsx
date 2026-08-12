@@ -7,11 +7,11 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-espresso text-cream px-6 py-3 shadow-[0_6px_18px_-6px_rgba(58,43,34,0.45)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(58,43,34,0.5)] active:translate-y-0',
+    'bg-bark text-cream px-6 py-3 shadow-[0_6px_18px_-6px_rgba(46,53,36,0.45)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(46,53,36,0.5)] active:translate-y-0',
   secondary:
-    'bg-sage text-cream px-6 py-3 shadow-[0_6px_18px_-6px_rgba(107,138,104,0.45)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(107,138,104,0.5)] active:translate-y-0',
+    'bg-sage text-cream px-6 py-3 shadow-[0_6px_18px_-6px_rgba(76,112,72,0.45)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-8px_rgba(76,112,72,0.5)] active:translate-y-0',
   ghost:
-    'bg-transparent text-espresso border border-espresso/25 px-6 py-3 hover:bg-espresso/5 hover:-translate-y-0.5',
+    'bg-transparent text-bark border border-bark/25 px-6 py-3 hover:bg-bark/5 hover:-translate-y-0.5',
 }
 
 export function Button({

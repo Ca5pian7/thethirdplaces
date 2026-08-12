@@ -5,7 +5,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { LinkButton } from '@/components/ui/Button'
-import { CoffeeBean, SteamWisp, DiscordIcon } from '@/components/icons'
+import { CoffeeBean, SteamWisp, MushroomIcon, DiscordIcon } from '@/components/icons'
 
 export const Route = createFileRoute('/network')({
   head: () => ({
@@ -92,11 +92,12 @@ function NetworkPage() {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              'radial-gradient(ellipse 75% 55% at 90% -10%, rgba(139,168,136,0.20), transparent), radial-gradient(ellipse 60% 45% at 0% 30%, rgba(198,139,86,0.16), transparent)',
+              'radial-gradient(ellipse 75% 55% at 90% -10%, rgba(111,148,99,0.20), transparent), radial-gradient(ellipse 60% 45% at 0% 30%, rgba(217,164,65,0.16), transparent)',
           }}
           aria-hidden="true"
         />
-        <SteamWisp className="absolute left-8 top-10 h-20 w-14 text-espresso/20 animate-float-slower hidden sm:block" aria-hidden="true" />
+        <SteamWisp className="absolute left-8 top-10 h-20 w-14 text-bark/20 animate-float-slower hidden sm:block" aria-hidden="true" />
+        <MushroomIcon className="absolute right-10 top-16 h-12 w-12 text-sage-dark/25 animate-float hidden sm:block" aria-hidden="true" />
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
           <ScrollReveal>
             <SectionHeading
@@ -114,21 +115,21 @@ function NetworkPage() {
           <ScrollReveal>
             <Card className="flex h-full flex-col gap-5 p-7">
               <div className="flex items-start justify-between gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-coffee/15 text-coffee">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-trunk/15 text-trunk">
                   <CoffeeBean className="h-7 w-7" />
                 </div>
-                <Badge tone="caramel">Main server</Badge>
+                <Badge tone="honey">Main server</Badge>
               </div>
               <div>
-                <h3 className="font-display text-xl font-semibold text-espresso">The Third Café</h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <h3 className="font-display text-xl font-semibold text-bark">The Third Café</h3>
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   Our original social and community server — slow conversations, warm company, and
                   the ritual of a shared cup of coffee. The heart of the network.
                 </p>
               </div>
               <Link
                 to="/"
-                className="mt-auto inline-flex items-center gap-2 self-start rounded-full border border-espresso/25 px-6 py-3 text-sm font-semibold text-espresso transition-all hover:-translate-y-0.5 hover:bg-espresso/5"
+                className="mt-auto inline-flex items-center gap-2 self-start rounded-full border border-bark/25 px-6 py-3 text-sm font-semibold text-bark transition-all hover:-translate-y-0.5 hover:bg-bark/5"
               >
                 Visit The Third Café
               </Link>
@@ -144,8 +145,8 @@ function NetworkPage() {
                 <Badge tone="sage">Roblox community</Badge>
               </div>
               <div>
-                <h3 className="font-display text-xl font-semibold text-espresso">TTC Roblox</h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <h3 className="font-display text-xl font-semibold text-bark">TTC Roblox</h3>
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   Members pick their games during onboarding and get sorted into dedicated
                   categories for the biggest ones &mdash; {games.join(', ')} &mdash; plus a shared
                   space for smaller games. Comes with guild recruitment, tournaments, showcases, and
@@ -167,16 +168,16 @@ function NetworkPage() {
           <ScrollReveal delay={180}>
             <Card className="flex h-full flex-col gap-5 border-dashed p-7">
               <div className="flex items-start justify-between gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-clay/15 text-clay">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-berry/15 text-berry">
                   <Sparkles className="h-7 w-7" />
                 </div>
-                <Badge tone="clay">Coming soon</Badge>
+                <Badge tone="berry">Coming soon</Badge>
               </div>
               <div>
-                <h3 className="font-display text-xl font-semibold text-espresso">
+                <h3 className="font-display text-xl font-semibold text-bark">
                   More tables on the way
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   We're slowly setting up more communities under the TTC name. If there's a niche
                   you think deserves its own table, tell us on Discord.
                 </p>
@@ -209,7 +210,7 @@ function NetworkPage() {
                     >
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </div>
-                    <h3 className="font-display text-base font-semibold leading-snug text-espresso">
+                    <h3 className="font-display text-base font-semibold leading-snug text-bark">
                       {game.name}
                     </h3>
                   </div>
@@ -243,7 +244,7 @@ function NetworkPage() {
       </section>
 
       {/* Why a network */}
-      <section className="border-y border-espresso/10 bg-parchment/50">
+      <section className="border-y border-bark/10 bg-parchment/50">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <ScrollReveal>
             <SectionHeading
@@ -257,13 +258,13 @@ function NetworkPage() {
               const Icon = point.icon
               return (
                 <ScrollReveal key={point.title} delay={i * 100}>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-espresso/8 text-coffee">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-bark/8 text-trunk">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-4 font-display text-lg font-semibold text-espresso">
+                  <h3 className="mt-4 font-display text-lg font-semibold text-bark">
                     {point.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-espresso-light">{point.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-bark-light">{point.body}</p>
                 </ScrollReveal>
               )
             })}

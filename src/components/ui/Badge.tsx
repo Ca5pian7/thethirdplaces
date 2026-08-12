@@ -5,12 +5,12 @@ export function Badge({
   tone = 'sage',
 }: {
   children: ReactNode
-  tone?: 'sage' | 'caramel' | 'clay'
+  tone?: 'sage' | 'honey' | 'berry'
 }) {
   const tones: Record<string, string> = {
     sage: 'bg-sage/15 text-sage-dark border-sage/30',
-    caramel: 'bg-caramel/15 text-coffee border-caramel/40',
-    clay: 'bg-clay/15 text-clay border-clay/30',
+    honey: 'bg-honey/15 text-trunk border-honey/40',
+    berry: 'bg-berry/15 text-berry border-berry/30',
   }
   return (
     <span

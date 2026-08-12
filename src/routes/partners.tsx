@@ -11,9 +11,9 @@ export const Route = createFileRoute('/partners')({
 
 const monogramTones: Record<string, string> = {
   sage: 'bg-sage/20 text-sage-dark',
-  caramel: 'bg-caramel/20 text-coffee',
-  clay: 'bg-clay/20 text-clay',
-  coffee: 'bg-coffee/15 text-coffee',
+  honey: 'bg-honey/20 text-trunk',
+  berry: 'bg-berry/20 text-berry',
+  trunk: 'bg-trunk/15 text-trunk',
 }
 
 const partners = [
@@ -21,7 +21,7 @@ const partners = [
     slug: 'Vp9J4VFmF9',
     name: 'Buddy Bunker',
     initials: 'BB',
-    tone: 'coffee',
+    tone: 'trunk',
     description:
       'Buddy Bunker your new online Home! From chatting, gaming and fun activities we have everything, and you are guaranteed to make friends along the way!',
   },
@@ -59,11 +59,11 @@ function PartnersPage() {
             <Card className={`flex h-full flex-col gap-5 p-7 ${i === 0 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
               <div className="flex items-start justify-between gap-4">
                 <PartnerLogo initials={partner.initials} tone={partner.tone} />
-                <Badge tone="caramel">Valued Partner</Badge>
+                <Badge tone="honey">Valued Partner</Badge>
               </div>
               <div>
-                <h3 className="font-display text-xl font-semibold text-espresso">{partner.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <h3 className="font-display text-xl font-semibold text-bark">{partner.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   {partner.description}
                 </p>
               </div>

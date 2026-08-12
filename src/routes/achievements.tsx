@@ -17,7 +17,7 @@ const counters = [
   { value: 39, label: 'countries represented', suffix: '' },
 ]
 
-type BadgeTone = 'sage' | 'caramel' | 'clay'
+type BadgeTone = 'sage' | 'honey' | 'berry'
 
 const achievements: Array<{
   category: string
@@ -94,11 +94,11 @@ function AnimatedCounter({
 
   return (
     <div ref={ref}>
-      <div className="font-display text-3xl font-semibold text-espresso sm:text-4xl">
+      <div className="font-display text-3xl font-semibold text-bark sm:text-4xl">
         {display.toLocaleString()}
         {suffix}
       </div>
-      <div className="mt-1 text-sm text-espresso-light">{label}</div>
+      <div className="mt-1 text-sm text-bark-light">{label}</div>
     </div>
   )
 }
@@ -115,7 +115,7 @@ function AchievementsPage() {
       </ScrollReveal>
 
       {/* Animated counters */}
-      <div className="mt-12 rounded-3xl border border-espresso/10 bg-parchment/50 px-6 py-10 sm:px-10">
+      <div className="mt-12 rounded-3xl border border-bark/10 bg-parchment/50 px-6 py-10 sm:px-10">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {counters.map((counter, i) => (
             <ScrollReveal key={counter.label} delay={i * 90}>
@@ -135,8 +135,8 @@ function AchievementsPage() {
           >
             <Card className={`flex h-full flex-col gap-4 ${item.span ? 'p-8' : 'p-7'}`}>
               <Badge tone={item.tone}>{item.category}</Badge>
-              <h3 className="font-display text-xl font-semibold text-espresso">{item.title}</h3>
-              <p className="text-sm leading-relaxed text-espresso-light">{item.description}</p>
+              <h3 className="font-display text-xl font-semibold text-bark">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-bark-light">{item.description}</p>
             </Card>
           </ScrollReveal>
         ))}
