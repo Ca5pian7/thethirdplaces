@@ -21,7 +21,7 @@ function encode(data: Record<string, string>): string {
 
 
 const inputClasses =
-  'w-full rounded-xl border border-espresso/20 bg-cream/50 px-4 py-3 text-espresso placeholder:text-espresso-light/60 transition-colors focus-visible:outline-none focus-visible:border-coffee'
+  'w-full rounded-xl border border-bark/20 bg-cream/50 px-4 py-3 text-bark placeholder:text-bark-light/60 transition-colors focus-visible:outline-none focus-visible:border-trunk'
 
 function ContactPage() {
   const [name, setName] = useState('')
@@ -80,10 +80,10 @@ function ContactPage() {
             <Card className="p-7 sm:p-9">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center gap-3 py-16 text-center">
-                  <h3 className="font-display text-2xl font-semibold text-espresso sm:text-3xl">
+                  <h3 className="font-display text-2xl font-semibold text-bark sm:text-3xl">
                     Thank you &mdash; we'll write back soon.
                   </h3>
-                  <p className="max-w-sm text-sm leading-relaxed text-espresso-light">
+                  <p className="max-w-sm text-sm leading-relaxed text-bark-light">
                     Your note is in good hands. Someone from the team reads every message that
                     comes through this form, usually over their own cup of coffee.
                   </p>
@@ -108,7 +108,7 @@ function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="name" className="mb-2 block text-sm font-semibold text-espresso">
+                    <label htmlFor="name" className="mb-2 block text-sm font-semibold text-bark">
                       Name
                     </label>
                     <input
@@ -124,7 +124,7 @@ function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="mb-2 block text-sm font-semibold text-espresso">
+                    <label htmlFor="email" className="mb-2 block text-sm font-semibold text-bark">
                       Email
                     </label>
                     <input
@@ -140,7 +140,7 @@ function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="mb-2 block text-sm font-semibold text-espresso">
+                    <label htmlFor="message" className="mb-2 block text-sm font-semibold text-bark">
                       Message
                     </label>
                     <textarea
@@ -156,7 +156,7 @@ function ContactPage() {
                   </div>
 
                   {error && (
-                    <p className="text-sm font-medium text-clay" role="alert">
+                    <p className="text-sm font-medium text-berry" role="alert">
                       {error}
                     </p>
                   )}
@@ -172,10 +172,10 @@ function ContactPage() {
           <ScrollReveal direction="right" delay={90} className="lg:col-span-2">
             <Card className="flex h-full flex-col gap-8 p-7 sm:p-9">
               <div>
-                <h3 className="font-display text-xl font-semibold text-espresso">
+                <h3 className="font-display text-xl font-semibold text-bark">
                   Join us on Discord
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   Most conversations happen in real time, not in an inbox. Come find your regulars.
                 </p>
                 <LinkButton
@@ -189,19 +189,19 @@ function ContactPage() {
                 </LinkButton>
               </div>
 
-              <div className="border-t border-espresso/10 pt-6">
-                <h3 className="font-display text-lg font-semibold text-espresso">
+              <div className="border-t border-bark/10 pt-6">
+                <h3 className="font-display text-lg font-semibold text-bark">
                   Partnering with us
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">
                   We love collaborating with other communities on joint events, trivia nights, and
                   cross-server hangouts. Drop a note in the form with the details, or find us in
                   the #partnerships channel on Discord and we'll take it from there.
                 </p>
               </div>
 
-              <div className="mt-auto border-t border-espresso/10 pt-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-espresso">
+              <div className="mt-auto border-t border-bark/10 pt-6">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-bark">
                   Find us elsewhere
                 </h3>
                 <div className="mt-4 flex items-center gap-3">
@@ -210,7 +210,7 @@ function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Join us on Discord"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-bark/15 text-bark-light transition-colors hover:bg-bark/5 hover:text-bark"
                   >
                     <DiscordIcon className="h-5 w-5" />
                   </a>
@@ -219,7 +219,7 @@ function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on Instagram"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-bark/15 text-bark-light transition-colors hover:bg-bark/5 hover:text-bark"
                   >
                     <InstagramIcon className="h-5 w-5" />
                   </a>
@@ -228,7 +228,7 @@ function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Follow us on X"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-bark/15 text-bark-light transition-colors hover:bg-bark/5 hover:text-bark"
                   >
                     <XIcon className="h-5 w-5" />
                   </a>

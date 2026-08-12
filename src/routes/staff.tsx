@@ -14,7 +14,7 @@ type StaffMember = {
   slug: string
   role: string
   bio: string
-  tone: 'sage' | 'caramel' | 'clay'
+  tone: 'sage' | 'honey' | 'berry'
   tilt?: string
   offset?: string
 }
@@ -25,7 +25,7 @@ const staff: StaffMember[] = [
     slug: 'kai',
     role: 'Cafe Owner',
     bio: 'Hello, I am Kai, I like computer, space & games.',
-    tone: 'caramel',
+    tone: 'honey',
     tilt: 'hover:-rotate-1',
   },
   {
@@ -33,7 +33,7 @@ const staff: StaffMember[] = [
     slug: 'DK',
     role: 'Cafe Owner',
     bio: 'Hi, I am DK, I do coding bots & certifed professional yapper.',
-    tone: 'caramel',
+    tone: 'honey',
     offset: 'hover:-rotate-1',
   },
   {
@@ -41,7 +41,7 @@ const staff: StaffMember[] = [
     slug: 'cesus',
     role: 'Assistant Cafe Owner',
     bio: 'Just an ordinary person, who loves helping others whenever she can. She is active and always keeps up a good mood, isn’t afraid of challenges, and specially love music and Math',
-    tone: 'clay',
+    tone: 'berry',
     tilt: 'hover:rotate-1',
   },
   {
@@ -49,7 +49,7 @@ const staff: StaffMember[] = [
     slug: 'huggebugg',
     role: 'Assistant Cafe Owner',
     bio: 'Runs the Sunday Slow Chats and refuses to let anyone leave without sharing one good thing from their week. Has a backup plan for every backup plan.',
-    tone: 'clay',
+    tone: 'berry',
     offset: 'hover:-rotate-1',
   },
   {
@@ -114,7 +114,7 @@ function StaffPage() {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              'radial-gradient(ellipse 70% 50% at 15% 0%, rgba(198,139,86,0.18), transparent), radial-gradient(ellipse 60% 45% at 100% 30%, rgba(139,168,136,0.16), transparent)',
+              'radial-gradient(ellipse 70% 50% at 15% 0%, rgba(217,164,65,0.18), transparent), radial-gradient(ellipse 60% 45% at 100% 30%, rgba(111,148,99,0.16), transparent)',
           }}
           aria-hidden="true"
         />
@@ -138,11 +138,11 @@ function StaffPage() {
                   <img
                     src={avatarUrl(person.slug)}
                     alt={`Portrait avatar of ${person.name}, ${person.role} at The Third Café`}
-                    className="h-16 w-16 shrink-0 rounded-full border border-espresso/10 bg-cream-dark"
+                    className="h-16 w-16 shrink-0 rounded-full border border-bark/10 bg-cream-dark"
                     loading="lazy"
                   />
                   <div>
-                    <h3 className="font-display text-lg font-semibold leading-tight text-espresso">
+                    <h3 className="font-display text-lg font-semibold leading-tight text-bark">
                       {person.name}
                     </h3>
                     <div className="mt-1.5">
@@ -150,14 +150,14 @@ function StaffPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-sm leading-relaxed text-espresso-light">{person.bio}</p>
+                <p className="text-sm leading-relaxed text-bark-light">{person.bio}</p>
                 <div className="mt-auto flex items-center gap-3 pt-1">
                   <a
                     href="https://discord.gg/WBkpNH96pf"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Message ${person.name} on Discord`}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-espresso/5 text-coffee transition-colors hover:bg-espresso/10"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-bark/5 text-trunk transition-colors hover:bg-bark/10"
                   >
                     <ChatBubbleIcon className="h-4.5 w-4.5" />
                   </a>

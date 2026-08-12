@@ -16,11 +16,11 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-espresso leading-tight text-balance">
+      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-bark leading-tight text-balance">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-lg text-espresso-light leading-relaxed">{description}</p>
+        <p className="mt-4 text-lg text-bark-light leading-relaxed">{description}</p>
       )}
     </div>
   )

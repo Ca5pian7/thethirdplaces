@@ -5,8 +5,9 @@ import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
 import {
-  CoffeeBean,
   SteamWisp,
+  LeafIcon,
+  PineconeIcon,
   ChatBubbleIcon,
   PeopleIcon,
   CupIcon,
@@ -94,45 +95,45 @@ function HomePage() {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              'radial-gradient(ellipse 80% 60% at 20% -10%, rgba(198,139,86,0.20), transparent), radial-gradient(ellipse 70% 50% at 100% 10%, rgba(139,168,136,0.18), transparent)',
+              'radial-gradient(ellipse 80% 60% at 20% -10%, rgba(217,164,65,0.20), transparent), radial-gradient(ellipse 70% 50% at 100% 10%, rgba(111,148,99,0.18), transparent)',
           }}
           aria-hidden="true"
         />
-        <CoffeeBean className="absolute -left-4 top-24 h-16 w-16 text-coffee/20 animate-float" aria-hidden="true" />
-        <CoffeeBean className="absolute right-8 top-10 h-10 w-10 text-clay/20 animate-float-slower" aria-hidden="true" />
-        <SteamWisp className="absolute right-16 bottom-10 h-24 w-16 text-espresso/30 animate-float-slower hidden sm:block" aria-hidden="true" />
+        <PineconeIcon className="absolute -left-4 top-24 h-16 w-16 text-trunk/20 animate-float" aria-hidden="true" />
+        <LeafIcon className="absolute right-8 top-10 h-10 w-10 text-sage-dark/25 animate-float-slower" aria-hidden="true" />
+        <SteamWisp className="absolute right-16 bottom-10 h-24 w-16 text-bark/30 animate-float-slower hidden sm:block" aria-hidden="true" />
 
         <div className="mx-auto max-w-7xl px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:pt-28">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sage-dark">
               Social &middot; Make Friends &middot; Connect
             </p>
-            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] text-espresso sm:text-5xl md:text-6xl">
-              Not your first place. Not your second. Just <span className="italic text-coffee">The Third Café.</span>
+            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] text-bark sm:text-5xl md:text-6xl">
+              Not your first place. Not your second. Just <span className="italic text-trunk">The Third Café.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-espresso-light">
-              We are a Discord table for people who miss the feeling of a good caf&eacute; &mdash;
-              slow mornings, long conversations, and regulars who remember your order. Pull up a
-              chair. The pot's always on.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-bark-light">
+              We are a Discord table for people who miss the feeling of a good caf&eacute; tucked
+              into the woods &mdash; slow mornings, long conversations, and regulars who remember
+              your order. Pull up a chair by the window. The pot's always on.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href={DISCORD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3.5 text-base font-semibold text-cream shadow-[0_10px_28px_-8px_rgba(58,43,34,0.5)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_32px_-8px_rgba(58,43,34,0.55)]"
+                className="inline-flex items-center gap-2 rounded-full bg-bark px-7 py-3.5 text-base font-semibold text-cream shadow-[0_10px_28px_-8px_rgba(46,53,36,0.5)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_32px_-8px_rgba(46,53,36,0.55)]"
               >
                 Join the Discord
               </a>
               <Link
                 to="/journey"
-                className="inline-flex items-center gap-2 rounded-full border border-espresso/20 px-7 py-3.5 text-base font-semibold text-espresso transition-all hover:-translate-y-0.5 hover:bg-espresso/5"
+                className="inline-flex items-center gap-2 rounded-full border border-bark/20 px-7 py-3.5 text-base font-semibold text-bark transition-all hover:-translate-y-0.5 hover:bg-bark/5"
               >
                 Read our story
               </Link>
             </div>
             <div className="mt-7 flex items-center gap-3">
-              <span className="text-sm text-espresso-light">Find us elsewhere:</span>
+              <span className="text-sm text-bark-light">Find us elsewhere:</span>
               <div className="flex items-center gap-2">
                 {socials.map(({ href, label, Icon }) => (
                   <a
@@ -141,7 +142,7 @@ function HomePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Follow us on ${label}`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-espresso/15 text-espresso-light transition-colors hover:bg-espresso/5 hover:text-espresso"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-bark/15 text-bark-light transition-colors hover:bg-bark/5 hover:text-bark"
                   >
                     <Icon className="h-4.5 w-4.5" />
                   </a>
@@ -153,16 +154,16 @@ function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-espresso/10 bg-parchment/50">
+      <section className="border-y border-bark/10 bg-parchment/50">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {stats.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 90}>
                 <div>
-                  <div className="font-display text-3xl font-semibold text-espresso sm:text-4xl">
+                  <div className="font-display text-3xl font-semibold text-bark sm:text-4xl">
                     {stat.value}
                   </div>
-                  <div className="mt-1 text-sm text-espresso-light">{stat.label}</div>
+                  <div className="mt-1 text-sm text-bark-light">{stat.label}</div>
                 </div>
               </ScrollReveal>
             ))}
@@ -190,11 +191,11 @@ function HomePage() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sage/15 text-sage-dark">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="font-display text-xl font-semibold text-espresso">
+                    <h3 className="font-display text-xl font-semibold text-bark">
                       {teaser.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-espresso-light">{teaser.body}</p>
-                    <span className="mt-auto text-sm font-semibold text-coffee">
+                    <p className="text-sm leading-relaxed text-bark-light">{teaser.body}</p>
+                    <span className="mt-auto text-sm font-semibold text-trunk">
                       Take a look &rarr;
                     </span>
                   </Card>

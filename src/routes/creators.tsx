@@ -17,7 +17,7 @@ import { ScrollReveal } from '@/components/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Card } from '@/components/ui/Card'
 import { LinkButton } from '@/components/ui/Button'
-import { CoffeeBean } from '@/components/icons'
+import { PawPrintIcon } from '@/components/icons'
 
 export const Route = createFileRoute('/creators')({
   head: () => ({
@@ -135,11 +135,11 @@ function CreatorsPage() {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              'radial-gradient(ellipse 75% 55% at 10% 0%, rgba(198,139,86,0.20), transparent), radial-gradient(ellipse 60% 45% at 100% 20%, rgba(181,101,74,0.16), transparent)',
+              'radial-gradient(ellipse 75% 55% at 10% 0%, rgba(217,164,65,0.20), transparent), radial-gradient(ellipse 60% 45% at 100% 20%, rgba(166,63,79,0.16), transparent)',
           }}
           aria-hidden="true"
         />
-        <CoffeeBean className="absolute right-10 top-16 h-14 w-14 text-clay/20 animate-float hidden sm:block" aria-hidden="true" />
+        <PawPrintIcon className="absolute right-10 top-16 h-14 w-14 text-berry/20 animate-float hidden sm:block" aria-hidden="true" />
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
           <ScrollReveal>
             <SectionHeading
@@ -169,11 +169,11 @@ function CreatorsPage() {
             return (
               <ScrollReveal key={perk.title} delay={(i % 4) * 90}>
                 <Card className="flex h-full flex-col gap-4 p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-caramel/15 text-coffee">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-honey/15 text-trunk">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-espresso">{perk.title}</h3>
-                  <p className="text-sm leading-relaxed text-espresso-light">{perk.body}</p>
+                  <h3 className="font-display text-lg font-semibold text-bark">{perk.title}</h3>
+                  <p className="text-sm leading-relaxed text-bark-light">{perk.body}</p>
                 </Card>
               </ScrollReveal>
             )
@@ -182,7 +182,7 @@ function CreatorsPage() {
       </section>
 
       {/* Partnered Creator */}
-      <section className="border-y border-espresso/10 bg-parchment/50">
+      <section className="border-y border-bark/10 bg-parchment/50">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <ScrollReveal>
             <SectionHeading
@@ -197,11 +197,11 @@ function CreatorsPage() {
               return (
                 <ScrollReveal key={perk.title} delay={(i % 4) * 90}>
                   <Card className="flex h-full flex-col gap-4 p-6">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-clay/15 text-clay">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-berry/15 text-berry">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="font-display text-lg font-semibold text-espresso">{perk.title}</h3>
-                    <p className="text-sm leading-relaxed text-espresso-light">{perk.body}</p>
+                    <h3 className="font-display text-lg font-semibold text-bark">{perk.title}</h3>
+                    <p className="text-sm leading-relaxed text-bark-light">{perk.body}</p>
                   </Card>
                 </ScrollReveal>
               )
@@ -229,8 +229,8 @@ function CreatorsPage() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-espresso">{item.title}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-espresso-light">{item.body}</p>
+                    <h3 className="font-display text-lg font-semibold text-bark">{item.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-bark-light">{item.body}</p>
                   </div>
                 </Card>
               </ScrollReveal>
@@ -240,7 +240,7 @@ function CreatorsPage() {
       </section>
 
       {/* How to apply */}
-      <section className="border-y border-espresso/10 bg-parchment/50">
+      <section className="border-y border-bark/10 bg-parchment/50">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
           <ScrollReveal>
             <SectionHeading eyebrow="How to apply" title="Three steps, no gatekeeping" />
@@ -248,13 +248,13 @@ function CreatorsPage() {
           <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {steps.map((step, i) => (
               <ScrollReveal key={step.title} delay={i * 100} as="li">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-espresso font-display text-lg font-semibold text-cream">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-bark font-display text-lg font-semibold text-cream">
                   {i + 1}
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-espresso">
+                <h3 className="mt-4 font-display text-xl font-semibold text-bark">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-light">{step.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-bark-light">{step.body}</p>
               </ScrollReveal>
             ))}
           </ol>
@@ -286,8 +286,8 @@ function CreatorsPage() {
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sage/15 text-sage-dark">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-espresso">{point.title}</h3>
-                  <p className="text-sm leading-relaxed text-espresso-light">{point.body}</p>
+                  <h3 className="font-display text-lg font-semibold text-bark">{point.title}</h3>
+                  <p className="text-sm leading-relaxed text-bark-light">{point.body}</p>
                 </Card>
               </ScrollReveal>
             )

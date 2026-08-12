@@ -49,7 +49,7 @@ type Tile = {
 // The gradient/icon art is only used as a fallback for tiles without an image.
 const tiles: Tile[] = [
   {
-    gradient: 'bg-gradient-to-br from-caramel/40 to-espresso/20',
+    gradient: 'bg-gradient-to-br from-honey/40 to-bark/20',
     icon: CupIcon,
     caption: 'Daily Brew — Tuesday regulars',
     aspect: 'h-72',
@@ -76,9 +76,9 @@ function TileArt({
           className="absolute inset-0 h-full w-full object-cover"
         />
       ) : (
-        <Icon className={`absolute inset-0 m-auto text-espresso/50 ${iconClassName}`} />
+        <Icon className={`absolute inset-0 m-auto text-bark/50 ${iconClassName}`} />
       )}
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/50 to-transparent p-4 pt-10">
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bark/50 to-transparent p-4 pt-10">
         <p className="font-display text-sm font-semibold text-cream sm:text-base">
           {tile.caption}
         </p>
@@ -126,11 +126,11 @@ function MomentsPage() {
                 type="button"
                 onClick={() => setOpenIndex(i)}
                 aria-label={`Open photo: ${tile.caption}`}
-                className="block w-full cursor-pointer rounded-2xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+                className="block w-full cursor-pointer rounded-2xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-trunk"
               >
                 <TileArt
                   tile={tile}
-                  className={`${tile.aspect} rounded-2xl shadow-[0_8px_24px_-12px_rgba(58,43,34,0.35)] transition-transform duration-300 hover:scale-[1.02]`}
+                  className={`${tile.aspect} rounded-2xl shadow-[0_8px_24px_-12px_rgba(46,53,36,0.35)] transition-transform duration-300 hover:scale-[1.02]`}
                 />
               </button>
             </ScrollReveal>
@@ -140,7 +140,7 @@ function MomentsPage() {
 
       {current && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-espresso/80 p-5 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-bark/80 p-5 backdrop-blur-sm transition-opacity duration-300"
           onClick={() => setOpenIndex(null)}
         >
           <div
@@ -157,7 +157,7 @@ function MomentsPage() {
               type="button"
               onClick={() => setOpenIndex(null)}
               aria-label="Close"
-              className="absolute -top-4 -right-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+              className="absolute -top-4 -right-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-bark shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-trunk"
             >
               <X className="h-5 w-5" />
             </button>
@@ -168,7 +168,7 @@ function MomentsPage() {
                 setOpenIndex((i) => (i === null ? i : (i - 1 + tiles.length) % tiles.length))
               }
               aria-label="Previous photo"
-              className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+              className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-bark shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-trunk"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -177,7 +177,7 @@ function MomentsPage() {
               type="button"
               onClick={() => setOpenIndex((i) => (i === null ? i : (i + 1) % tiles.length))}
               aria-label="Next photo"
-              className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-espresso shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coffee"
+              className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-cream/90 text-bark shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-trunk"
             >
               <ChevronRight className="h-6 w-6" />
             </button>

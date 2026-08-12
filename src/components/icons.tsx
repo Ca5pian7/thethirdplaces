@@ -125,6 +125,80 @@ export function XIcon({ className = '' }: { className?: string }) {
   )
 }
 
+export function LeafIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M10 38C6 24 14 8 38 8c2 22-12 32-28 30Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+        fill="currentColor"
+        fillOpacity="0.12"
+      />
+      <path d="M12 36C20 26 28 18 36 10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function PineconeIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 64" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M24 4c9 8 13 20 13 32 0 10-6 20-13 24-7-4-13-14-13-24 0-12 4-24 13-32Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+        fill="currentColor"
+        fillOpacity="0.1"
+      />
+      <path
+        d="M13 20c5 2 17 2 22 0M12 30c6 2.5 18 2.5 24 0M13 40c5 2 17 2 22 0"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function MushroomIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M8 22C8 12 15 6 24 6s16 6 16 16c-6 3-26 3-32 0Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+        fill="currentColor"
+        fillOpacity="0.14"
+      />
+      <circle cx="17" cy="15" r="1.6" fill="currentColor" />
+      <circle cx="27" cy="12" r="1.4" fill="currentColor" />
+      <circle cx="24" cy="19" r="1.3" fill="currentColor" />
+      <path
+        d="M18 22v12a6 6 0 0 0 12 0V22"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function PawPrintIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+      <ellipse cx="24" cy="32" rx="11" ry="9" fill="currentColor" opacity="0.9" />
+      <ellipse cx="9" cy="18" rx="5" ry="6.5" fill="currentColor" opacity="0.9" />
+      <ellipse cx="22" cy="10" rx="5" ry="6.5" fill="currentColor" opacity="0.9" />
+      <ellipse cx="35" cy="14" rx="5" ry="6.5" fill="currentColor" opacity="0.9" />
+      <ellipse cx="41" cy="26" rx="4.5" ry="6" fill="currentColor" opacity="0.9" />
+    </svg>
+  )
+}
+
 export function StringLightsIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 24" fill="none" className={className} aria-hidden="true">

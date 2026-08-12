@@ -1,16 +1,16 @@
 @import "tailwindcss" source("../");
 
 @theme {
-  --color-cream: #faf3e8;
-  --color-cream-dark: #f2e6d2;
-  --color-parchment: #efe2c9;
-  --color-espresso: #3a2b22;
-  --color-espresso-light: #5c4636;
-  --color-coffee: #8a5a3b;
-  --color-caramel: #c68b56;
-  --color-sage: #8ba888;
-  --color-sage-dark: #6b8a68;
-  --color-clay: #b5654a;
+  --color-cream: #f6f1e0;
+  --color-cream-dark: #ece3c8;
+  --color-parchment: #e7ddc0;
+  --color-bark: #2e3524;
+  --color-bark-light: #4b5140;
+  --color-trunk: #6b5a3a;
+  --color-honey: #d9a441;
+  --color-sage: #6f9463;
+  --color-sage-dark: #4c7048;
+  --color-berry: #a63f4f;
 
   --font-display: "Fraunces", "Playfair Display", serif;
   --font-body: "Public Sans", "Work Sans", sans-serif;
@@ -103,7 +103,7 @@ code {
 
 /* focus-visible warmth */
 :focus-visible {
-  outline: 2px solid var(--color-coffee);
+  outline: 2px solid var(--color-trunk);
   outline-offset: 2px;
   border-radius: 4px;
 }
