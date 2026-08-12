@@ -80,7 +80,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-bark/10 pt-6 text-xs text-bark-light/80">
-          &copy; {new Date().getFullYear()} The Third Place. A community, not a company.
+          &copy; {new Date().getFullYear()} The Third Café. A community, not a company.
         </div>
       </div>
     </footer>
